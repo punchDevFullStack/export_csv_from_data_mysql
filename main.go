@@ -66,6 +66,6 @@ func mapMemberString(members []Member) [][]string {
 		ret = append(ret, row)
 
 	}
-	fmt.Println("total value ", ret)
+	fmt.Println("total value : ", ret)
 	return ret
 }
