@@ -11,5 +11,21 @@ pipeline {
         sh 'ls' 
       }
     }
+    stage('Deliver for development') {
+      when {
+        branch 'development'
+      }
+      steps {
+        sh 'ls'
+      }
+    }
+    stage('Deploy for production') {
+      when {
+        branch 'production'
+      }
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
