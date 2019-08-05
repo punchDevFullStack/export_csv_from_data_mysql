@@ -27,5 +27,13 @@ pipeline {
         sh 'ls'
       }
     }
+    stage('Deploy for v.*') {
+      when {
+        tag 'v.*'
+      }
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
